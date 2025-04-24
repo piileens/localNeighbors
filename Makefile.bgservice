@@ -1,0 +1,16 @@
+all: bgservice
+
+bgservice: bgservice.o service.o
+	g++ -o bgservice service.o bgservice.o
+
+bgservice.o: bgservice.cpp
+	g++ -c bgservice.cpp
+
+service.o: service.cpp service.hpp 
+	g++ -c service.cpp
+
+.PHONY: all clean
+
+clean:
+	rm -f *.o bgservice
+
