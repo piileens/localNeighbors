@@ -1,6 +1,7 @@
 # localNeighbors
 
 ##build
+
 `make`
 
 ##clean 
